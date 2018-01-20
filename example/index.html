@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.slide {
+			position: fixed;
+			width: 100%;
+			height: 0;
+			padding-top: 50%;
+		}
+
+		ul {
+			position: absolute;
+			background-color: red;
+			list-style-type: none;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		li {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+<script src="../carsouel.js"></script>
+<div class="slide">
+	<ul>
+		<li>
+			<img data-src="http://d10.yihaodianimg.com/V00/M03/4D/41/CgQDsVQG4d6AISZPAAFa7N3KyPY18100.jpg">
+		</li>
+		<li>
+			<img src="http://d10.yihaodianimg.com/V00/M04/32/59/CgQDsVQDEtaAVv4BAAEFc6n3fws75000.jpg" alt="">
+		</li>
+		<li>
+			<img src="http://d11.yihaodianimg.com/N05/M04/82/EC/CgQI01QEHoiAFBbgAAC9du5zOPc62900.jpg" alt="">
+		</li>
+		<!--<li>-->
+			<!--<img src="http://d10.yihaodianimg.com/N07/M09/26/8B/CgQI0FQFd8-ACrb7AADBtSan3a084000.jpg" alt="">-->
+		<!--</li>-->
+		<!--<li>-->
+			<!--<img src="http://d11.yihaodianimg.com/N05/M07/8B/45/CgQI01QGlhyAevtRAADW1vYf_BE12500.jpg" alt="">-->
+		<!--</li>-->
+	</ul>
+</div>
+<script>
+  var slider = new Slider({
+    lazyload: true,
+    beforeSlide: function () {console.log('beforeSlide')},
+    onSlide: function (item, index) { console.log(item, index)},
+		loop: true,
+		autoPlay: true,
+		index: 2,
+    delay: 4000,
+		ease: 'linear',
+		el: '.slide'
+  })
+</script>
+</body>
+</html>
