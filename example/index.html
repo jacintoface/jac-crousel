@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-<script src="../carsouel.js"></script>
+<script src="../src/carsouel.js"></script>
 <div class="slide">
     <ul>
         <li>
@@ -75,7 +75,6 @@
 </div>
 <button type="button" style="padding-top: 200px" id="btn1">跳转1</button>
 <button type="button" style="padding-top: 200px" id="btn2">跳转2</button>
-
 <script>
 	var slider = new Slider({
 		lazyload: true,
@@ -86,7 +85,7 @@
 			console.log(item, index)
 		},
 		loop: true,
-		autoPlay: false,
+		autoPlay: true,
 		index: 0,
 		delay: 4000,
 		ease: 'linear',
